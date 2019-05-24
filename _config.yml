@@ -63,8 +63,6 @@ collections:
   _banner:
     output: true
   # Custom Collections
-  _abstracts:
-    output: true
 
 defaults:
   # Default
@@ -130,54 +128,47 @@ defaults:
     values:
       layout: banner
 # Custom collections
-  # ABSTRACTS
+  # PROJECTS
   - scope:
-      path: ''
-      type: _abstracts
+      path: ""
+      type: _pages
     values:
-      title: ''
-      author: ''
-      layout: abstract_details
-      permalink: '/abstracts/:name/'
+      layout: projects
+      permalink: "/projects/"
       published: true
       isPublic_b: true
-      tabTitle_txt: 'Abstract Details'
-      posternumber_ti: ''
-      categories_list:
-        - category_txt: ''
-      keywords_txt: ''
-      authors_list:
-        - authors_txt: ''
-          reference: ''
-      affiliations_list:
-        - affiliation_txt: ''
-          reference: ''
-      presenting-author_txt: ''
-      presenting-author-email_txt: ''
-      presenting-author-title_txt: ''
-      text_txt: ''
-    required: []
-    validate: {}
+      project_list:
+        - projectImg: ""
+          project_txt: ""
+          project_url: ""
     labels:
-      title: Title
-      author: Author
       layout: Layout
       permalink: Permanent Link
       published: Published
       isPublic_b: Public
-      tabTitle_txt: Tab Title
-      posternumber_ti: Poster Number
-      categories_list: Category List
-      categories_list.category_txt: Category List Item
-      keywords_txt: Keywords
-      authors_list: List of Authors
-      authors_list.author_txt: Author
-      affiliations_list: List of Affiliations
-      affiliations_list.affiliation_txt: Author Affiliation
-      presenting-author_txt: Presenting Author Name
-      presenting-author-email_txt: Presenting Author Email
-      presenting-author-title_txt: Presenting Author Title
-      text_txt: Abstract Text
+      projectImg: Cover art
+      project_txt: Description
+  # BLOG
+  - scope:
+      path: ""
+      type: _pages
+    values:
+      layout: blog
+      permalink: "/blog/"
+      published: true
+      isPublic_b: true
+      blog_list:
+        - blogItm_list:
+          - blogImg: ""
+          - title_txt: ""
+          - preview_txt: ""
+          - blog_link: ""
+    labels:
+      layout: Layout
+      permalink: Permanent link
+      published: Published
+      isPublic_b: Public
+      blog_list: List of blog posts
 
 ######################################################################
 # Jekyll Environment Config
