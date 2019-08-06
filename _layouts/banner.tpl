@@ -1,7 +1,6 @@
 ---
 layout: default
 ---
-<!-- For "Automatic Alias on CMUI-->
 <div class="container">
     <div id="{{ page.bannerName_txt }}" class="banner banner-{{ page.bannerName_txt }} banner-{{ page.position_txt }} {% if page.dismissible_b %}banner-dismissible{% endif %} {% if page.level_txt %}banner-{{ page.level_txt }}{% else %}banner-default{% endif %}">
       {% if include.position == 'center' %}<div class="banner-{{ include.position}}-content-wrapper">{% endif %}

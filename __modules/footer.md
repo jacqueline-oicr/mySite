@@ -3,7 +3,7 @@ title: "Footer"
 author: jacqueline 
 published: true
 
-iconimg_txt: "favicon_oicr.png"
+iconimg_txt: /favicon_oicr.png/
 
 contact_list:
   - link_txt: "https://github.com/jacqueline-oicr/"

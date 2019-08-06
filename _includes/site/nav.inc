@@ -6,8 +6,8 @@
                 <div role="presentation" id="nav-item-title">
                     <a class="nav-link" href="/">
                         {% if page.title == 'Jacqueline Li' %}
-                        <img id="logo-img" src={{nav.nav-logo-link}}>
-                        <p id="logo-text">{{nav.site-title_txt}}<br>{{nav.site-title_txt2}}</p>
+                        <img id="logo-img" src="{{nav.nav-logo-link}}">
+                        <p id="logo-text">{{nav.site-title_txt}}</p>
                         {% endif %}
                     </a>
                 </div>

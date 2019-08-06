@@ -63,6 +63,10 @@ collections:
   _banner:
     output: true
   # Custom Collections
+  _projects: 
+    output: true
+  _blog: 
+    output: true
 
 defaults:
   # Default
@@ -131,44 +135,52 @@ defaults:
   # PROJECTS
   - scope:
       path: ""
-      type: _pages
+      type: _project
     values:
-      layout: projects
-      permalink: "/projects/"
+      layout: project
+      permalink: '/:projects/:name'
       published: true
       isPublic_b: true
-      project_list:
-        - projectImg: ""
-          project_txt: ""
-          project_url: ""
+      tabTitle_txt: ""
+      projectImg: ""
+      project_txt: ""
+      project_url: ""
     labels:
       layout: Layout
       permalink: Permanent Link
       published: Published
       isPublic_b: Public
-      projectImg: Cover art
-      project_txt: Description
+      tabTitle_txt: Tab Title (Project Name)
+      projectImg: Image of project
+      project_txt: Description of project
+      project_url: Url to project
+      
   # BLOG
   - scope:
       path: ""
-      type: _pages
+      type: _blog
     values:
       layout: blog
-      permalink: "/blog/"
+      permalink: '/:blog/:name'
       published: true
       isPublic_b: true
+      tabTitle_txt: ""
+      categories_list:
+        - category_txt: ""
       blog_list:
-        - blogItm_list:
-          - blogImg: ""
-          - title_txt: ""
-          - preview_txt: ""
-          - blog_link: ""
+        - blog_txt: ""
+          blogImg: ""
+          preview_txt: ""
+          blog_link: ""
     labels:
       layout: Layout
       permalink: Permanent link
       published: Published
       isPublic_b: Public
-      blog_list: List of blog posts
+      tabTitle_txt: Tab Title (Blog Name)
+      category_list: Category List
+      category_list.category_txt: Category List Item
+      blog_list: List of Blogs
 
 ######################################################################
 # Jekyll Environment Config

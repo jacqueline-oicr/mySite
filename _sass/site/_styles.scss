@@ -1,11 +1,15 @@
-#about-page{
-  .intro{
+.about-page{
+  #intro{
     display: flex;
     flex-wrap: wrap;
+    margin: 20px;
+    padding-top: 70px;
+
     .profile-pic{
       width: 200px;
       height: 200px;
-      margin: 10px;
+      display: block;
+      position: relative;
       border: 1px solid black;
       @media (max-width: 768px) {
         display: block;
@@ -13,14 +17,25 @@
         margin-right: auto;
       }
     }
+
     .body-txt{
-      margin: 10px;
+      position: absolute;
+      align-items: center;
       font-size: 16px;
       font-weight: 200;
+      @media (max-width: 1200px) {
+        margin-left: 20px;
+      }
+      @media (max-width: 992px) {
+        margin-left: 20px;
+      }
+      @media (max-width: 768px) {
+        margin-top: 20px;
+      }
     }
   }
 
-  .like_panel{
+  #like_panel{
     margin: 10px;
     height: 750px;
     font-size: 80px;

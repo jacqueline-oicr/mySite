@@ -12,7 +12,7 @@
 <link rel='stylesheet' href='//fonts.googleapis.com/css?family=Nunito' type='text/css' />
 <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-<link rel="shortcut icon" href="/favicon_oicr.png" type="image/x-icon">
+<link rel="shortcut icon" href="/favicon_oicr.png/" type="image/x-icon">
 
 <script src="/assets/site/js/env_theme.js?{{ "now" | date: "%s" }}"></script>
 

@@ -1,5 +1,5 @@
-jQuery(function($) {
-  $("#toBottom").click(function(e) {
+jQuery(function ($) {
+  $("#toBottom").click(function (e) {
     e.preventDefault();
     $("html,body").animate(
       {
@@ -24,7 +24,7 @@ jQuery(function($) {
 
   backToTop();
 
-  $("#backToTop").click(function() {
+  $("#backToTop").click(function () {
     $("html, body").animate({ scrollTop: 0 }, 600);
     return false;
   });
@@ -54,7 +54,7 @@ jQuery(function($) {
       }
       //Dropdown list
       $(".dropdown-toggle").attr("data-toggle", "dropdown");
-      $(".dropdown-toggle").click(function() {
+      $(".dropdown-toggle").click(function () {
         if ($(this).hasClass("open")) {
           $(this).removeClass("open");
         } else {
@@ -71,7 +71,7 @@ jQuery(function($) {
         var navHeight = $("main").length
           ? $("main").offset().top - $("#sticky-nav").outerHeight()
           : $("#app-user-services").offset().top -
-            $("#sticky-nav").outerHeight();
+          $("#sticky-nav").outerHeight();
         if (window.pageYOffset <= navHeight) {
           $("#navigation").removeClass("sticky");
         }
@@ -101,7 +101,7 @@ jQuery(function($) {
 
   sizeDependentMenuBehaviour();
   $window.resize(sizeDependentMenuBehaviour);
-  $window.scroll(function() {
+  $window.scroll(function () {
     if (!window.STICKYNAV_DISABLED) {
       /* Navbar minimization */
       stickyNavBar();
@@ -114,7 +114,7 @@ jQuery(function($) {
 
   /*-------------------------------------------------*/
   //Agenda Page Functions
-  $(document).ready(function() {
+  $(document).ready(function () {
     if (document.getElementById("agenda-page")) {
       $("#schedule-day2").hide();
 
@@ -122,7 +122,7 @@ jQuery(function($) {
 
       document
         .getElementById("btn-day1")
-        .addEventListener(touchEvent, function(e) {
+        .addEventListener(touchEvent, function (e) {
           e.stopPropagation();
           if (!$("#btn-day1").hasClass("active")) {
             $("#btn-day1").toggleClass("active");
@@ -136,7 +136,7 @@ jQuery(function($) {
 
       document
         .getElementById("btn-day2")
-        .addEventListener(touchEvent, function(e) {
+        .addEventListener(touchEvent, function (e) {
           e.stopPropagation();
           if (!$("#btn-day2").hasClass("active")) {
             $("#btn-day2").toggleClass("active");
@@ -150,3 +150,29 @@ jQuery(function($) {
     }
   });
 });
+
+// Select all links linked to ids
+$('a[href*="#"]')
+  // Remove links that don't link to anything
+  .not('[href="#"]')
+  .not('[href="#0"]')
+  .click(function (event) {
+    // On-page links
+    if (
+      location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
+      &&
+      location.hostname == this.hostname
+    ) {
+      // Determine element to scroll to
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+      // Determine if scroll target exists
+      if (target.length) {
+        // Prevent default if animation happens
+        event.preventDefault();
+        $('html, body').animate({
+          scrollTop: target.offset().top
+        });
+      }
+    }
+  });
