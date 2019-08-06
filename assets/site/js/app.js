@@ -151,6 +151,9 @@ jQuery(function ($) {
   });
 });
 
+// Get the height of the intro
+var introHeight = $("div#intro").height();
+
 // Select all links linked to ids
 $('a[href*="#"]')
   // Remove links that don't link to anything
@@ -167,8 +170,13 @@ $('a[href*="#"]')
       var target = $(this.hash);
       target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
       // Determine if scroll target exists
-      if (target.length) {
+      if (target.length && this.hash == '#intro') {
         // Prevent default if animation happens
+        event.preventDefault();
+        $('html, body').animate({
+          scrollTop: target.offset().top - introHeight
+        });
+      } else {
         event.preventDefault();
         $('html, body').animate({
           scrollTop: target.offset().top
