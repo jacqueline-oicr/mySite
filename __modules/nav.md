@@ -11,7 +11,7 @@ mobileTitle_txt: Menu
 site-profileImg: /assets/site/images/jacquelineProfile.JPG
 site-title_txt: JACQUELINE LI
 
-nav-logo-link: /favicon_oicr.png/
+nav-logo-link: /favicon_oicr.png
 
 nav_list:
   - title_txt: ABOUT
