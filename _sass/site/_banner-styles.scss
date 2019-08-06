@@ -1,0 +1,111 @@
+// Banner-Home
+.banner-home {
+  .jumbotron {
+    height: 500px;
+    background-image: url(/assets/site/images/background.jpeg);
+    height: 100vh;
+  }
+
+// Heading 
+  .banner-text {
+    position: relative;
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    @media (max-width: 768px) {
+      margin-top: 120px;
+    }
+      .title {
+        font-weight: normal;
+        font-size: 60px;
+        text-align: center;
+        line-height: 70px;
+        padding-top: 20vh;
+        }
+        .heading-text {
+          font-weight: lighter;
+          font-size: 30px;
+        }
+      }
+
+// Arrow 
+      .arrow{
+        position: absolute;
+        top: 82%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        scroll-behavior: smooth;
+      }
+    .arrow span{
+        display: block;
+        width: 30px;
+        height: 30px;
+        border-bottom: 5px solid white;
+        border-right: 5px solid white;
+        transform: rotate(45deg);
+        margin: -10px;
+        animation: animate 2s infinite;
+      }
+    .arrow span:nth-child(2){
+        animation-delay: -0.2s;
+      }
+    .arrow span:nth-child(3){
+        animation-delay: -0.4s;
+      }
+    @keyframes animate {
+        0%{
+            opacity: 0;
+            transform: rotate(45deg) translate(-20px,-20px);
+          }
+        50%{
+            opacity: 1;
+          }
+        100%{
+            opacity: 0;
+            transform: rotate(45deg) translate(20px,20px);
+          }
+      }
+    }
+
+// Banner (pages) 
+#banner {
+  .jumbotron {
+    background-image: url(/assets/site/images/background.jpeg);
+    background-size: cover;
+    @media (min-width: 1200px) {
+      height: 400px;
+    }
+
+    @media (max-width: 992px) {
+      height: 350px;
+    }
+
+    @media (min-width: 768px) {
+      height: 300px;
+    }
+    #banner-text {
+      color: white;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      @media (max-width: 768px) {
+        margin-top: 120px;
+      }
+      .title{
+        h1{
+          font-weight: normal;
+          font-size: 60px;
+        }
+        p {
+          font-weight: normal;
+          font-size: 30px;
+        }
+      }
+    }
+  }
+}
