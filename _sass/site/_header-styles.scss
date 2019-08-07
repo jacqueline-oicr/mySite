@@ -37,7 +37,7 @@
       &:hover,
       &:active,
       &:focus {
-        color: $bpColor;
+        color: $indigoColor;
         background-color: white;
         border-bottom: none;
       }
@@ -239,12 +239,12 @@ button.navbar-toggle {
     .nav-link {
       #logo-img {
         display: inline;
-        width: 100px;
-        height: 100px;
+        width: 80px;
+        height: 80px;
 
         @media (max-width: 920px) {
-          width: 100px;
-          height: 100px;
+          width: 80px;
+          height: 80px;
         }
 
         @media (max-width: 860px) {
@@ -337,7 +337,7 @@ button.navbar-toggle {
     height: 28px;
     width: 90px;
     border-radius: 3px;
-    background-color: $bpColor;
+    background-color: $indigoColor;
     color: white;
     outline: 0;
     text-align: center;
@@ -393,9 +393,9 @@ button.navbar-toggle {
         &:hover,
         &:focus,
         &.active {
-          color: $bpColor;
+          color: $indigoColor;
           background-color: white;
-          border-top: 1px solid $bpColor;
+          border-top: 1px solid $indigoColor;
           @media (max-width: 768px) {
             border-bottom: none;
           }
@@ -433,7 +433,7 @@ button.navbar-toggle {
         &:focus,
         &.active {
           &:after {
-            border-top-color: $bpColor;
+            border-top-color: $indigoColor;
           }
         }
       }
@@ -453,8 +453,8 @@ button.navbar-toggle {
         }
         a,
         a#dropdown-toggle-link::after {
-          color: $bpColor;
-          border-top-color: $bpColor;
+          color: $indigoColor;
+          border-top-color: $indigoColor;
         }
       }
 
@@ -482,8 +482,8 @@ button.navbar-toggle {
         &.open {
           > a#dropdown-toggle-link {
             background-color: white;
-            border-bottom: 1px solid $bpColor;
-            color: $bpColor;
+            border-bottom: 1px solid $indigoColor;
+            color: $indigoColor;
           }
 
           ul.dropdown-menu {
@@ -496,7 +496,7 @@ button.navbar-toggle {
                 &:hover,
                 &:focus,
                 &.active {
-                  color: $bpColor;
+                  color: $indigoColor;
                   background-color: white;
                 }
               }
@@ -504,11 +504,11 @@ button.navbar-toggle {
 
             > .active > a {
               background-color: white;
-              color: $bpColor;
+              color: $indigoColor;
               &:hover,
               &.active {
                 background-color: white;
-                color: $bpColor;
+                color: $indigoColor;
               }
             }
           }
@@ -536,7 +536,7 @@ button.navbar-toggle {
 
               &:hover,
               &.active {
-                color: $bpColor;
+                color: $indigoColor;
                 background-color: white;
               }
             }
@@ -544,11 +544,11 @@ button.navbar-toggle {
 
           > .active > a {
             background-color: white;
-            color: $bpColor;
+            color: $indigoColor;
             &:hover,
             &.active {
               background-color: white;
-              color: $bpColor;
+              color: $indigoColor;
             }
           }
         }
