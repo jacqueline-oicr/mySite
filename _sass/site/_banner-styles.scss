@@ -8,7 +8,6 @@
 
 // Heading 
   .banner-text {
-    position: relative;
     color: white;
     text-align: center;
     display: flex;
@@ -19,6 +18,7 @@
       margin-top: 120px;
     }
       .title {
+        position: relative;
         font-weight: normal;
         font-size: 60px;
         text-align: center;
@@ -34,7 +34,7 @@
 // Arrow 
       .arrow{
         position: absolute;
-        top: 82%;
+        top: 85%;
         left: 50%;
         transform: translate(-50%,-50%);
         scroll-behavior: smooth;
